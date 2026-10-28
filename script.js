@@ -8,6 +8,13 @@
 //  Do NOT add onclick in the HTML.
 // ============================================
 
+let now = new Date();
+
+let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+let dayName = document.getElementById("warmUpDate");
+
+dayName.innerHTML = days[now.getDay()];
 
 // ============================================
 //  WARM-UP: Day Name
@@ -30,6 +37,7 @@
 // STEP 5: Display the day name in the element with ID "warmUpDate"
 //         using document.getElementById("warmUpDate").innerHTML
 
+let myDate = 
 
 // ============================================
 //  PART 1: Current Date Display
