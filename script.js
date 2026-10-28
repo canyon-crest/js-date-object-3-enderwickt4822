@@ -41,7 +41,7 @@ let myDate = document.getElementById("myDate");
 
 let date = (now.getMonth() + 1) + "/" + now.getDate() + "/" + now.getFullYear();
 
-myDate.innerHTML = myDate;
+myDate.innerHTML = date;
 
 // ============================================
 //  PART 1: Current Date Display
