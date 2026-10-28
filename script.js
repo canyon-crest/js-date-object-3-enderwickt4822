@@ -89,7 +89,7 @@ let running = true;
 function handler() {
     let current = new Date().getTime();
     let elapsed = (current - start) / 1000;
-    document.getElementById("myTimer").toFixed(3);
+    document.getElementById("myTimer").innerHTML = elapsed.toFixed(3);
 }
 
 let timer = setInterval(handler, 10);
