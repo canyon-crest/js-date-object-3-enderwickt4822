@@ -37,7 +37,11 @@ dayName.innerHTML = days[now.getDay()];
 // STEP 5: Display the day name in the element with ID "warmUpDate"
 //         using document.getElementById("warmUpDate").innerHTML
 
-let myDate = 
+let myDate = document.getElementById("myDate");
+
+let date = (now.getMonth() + 1) + "/" + now.getDate() + "/" + now.getFullYear();
+
+myDate.innerHTML = myDate;
 
 // ============================================
 //  PART 1: Current Date Display
@@ -78,6 +82,30 @@ let myDate =
 //          c) Display the elapsed time using .toFixed(3)
 //             in the element with ID "myTimer"
 
+let start = new Date().getTime();
+
+let running = true;
+
+function handler() {
+    let current = new Date().getTime();
+    let elapsed = (current - start) / 1000;
+    document.getElementById("myTimer").toFixed(3);
+}
+
+let timer = setInterval(handler, 10);
+
+document.getElementById("myBtn").addEventListener("click", function() {
+    if (running) {
+        clearInterval(timer);
+        document.getElementById("myBtn").innerHTML = "Start";
+    } else {
+        start = new Date().getTime();
+        timer = setInterval(handler, 10);
+        document.getElementById("myBtn").innerHTML = "Stop";
+    }
+
+    running = !running;
+})
 
 // ============================================
 //  PART 3: Start/Stop Toggle Button
